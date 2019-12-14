@@ -9,6 +9,8 @@ add_subdirectory(fancy_lib)
 add_executable(simple main.cpp)
 target_link_libraries(simple PUBLIC fancy)
 
+set_property(TARGET simple PROPERTY CXX_STANDARD 17)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
